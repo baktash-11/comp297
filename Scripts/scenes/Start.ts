@@ -2,13 +2,10 @@ module scenes
 {
     export class Start extends objects.Scene
     {
-        // PRIVATE INSTANCE MEMBERS
+        // instance memebers
         welcomeLabel: objects.Label;
         startButton: objects.Button;
-
-        // PUBLIC PROPERTIES
-
-        // CONSTRUCTOR
+        // constructor
         constructor()
         {
             super();
@@ -20,15 +17,15 @@ module scenes
             this.Start();
         }
 
-        // PRIVATE METHODS
+        
 
-        // PUBLIC METHODS
+        // methods
         public Start(): void 
         {
-             //instantiate a new Text object
-            this.welcomeLabel = new objects.Label("The Game", "80px", "Consolas", "#000000", 320, 180, true);
+            //instantiate a new Text object
+            this.welcomeLabel = new objects.Label("Welcome", "80px", "Consolas", "#000000", 320, 180, true);
             // buttons
-             this.startButton = new objects.Button('./Assets/images/startButton.png', 320, 430, true);
+            this.startButton = new objects.Button('./Assets/images/btnstart.png', 320, 430, true);
             this.Main();
         }        
         
@@ -36,15 +33,12 @@ module scenes
         {
            
         }
-        
+
         public Main(): void 
         {
-       
             this.addChild(this.welcomeLabel);
-
-        
             this.addChild(this.startButton);
-
+            
             this.startButton.on("click", ()=>{
                 config.Game.SCENE = scenes.State.PLAY;
             });

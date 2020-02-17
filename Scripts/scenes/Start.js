@@ -15,8 +15,7 @@ var scenes;
 (function (scenes) {
     var Start = /** @class */ (function (_super) {
         __extends(Start, _super);
-        // PUBLIC PROPERTIES
-        // CONSTRUCTOR
+        // constructor
         function Start() {
             var _this = _super.call(this) || this;
             // initialization
@@ -25,13 +24,12 @@ var scenes;
             _this.Start();
             return _this;
         }
-        // PRIVATE METHODS
-        // PUBLIC METHODS
+        // methods
         Start.prototype.Start = function () {
             //instantiate a new Text object
-            this.welcomeLabel = new objects.Label("The Game", "80px", "Consolas", "#000000", 320, 180, true);
+            this.welcomeLabel = new objects.Label("Welcome", "80px", "Consolas", "#000000", 320, 180, true);
             // buttons
-            this.startButton = new objects.Button('./Assets/images/startButton.png', 320, 430, true);
+            this.startButton = new objects.Button('./Assets/images/btnstart.png', 320, 430, true);
             this.Main();
         };
         Start.prototype.Update = function () {
